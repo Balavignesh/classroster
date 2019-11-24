@@ -3,6 +3,7 @@
  */
 package edu.franklin.comp645.rpmdb.services;
 
+import edu.franklin.comp645.rpmdb.dao.StudentDao;
 import edu.franklin.comp645.rpmdb.entity.Student;
 
 /**
@@ -11,11 +12,10 @@ import edu.franklin.comp645.rpmdb.entity.Student;
  */
 public class StudentService {
 	
-public boolean addStudent(Student student) {
+public StudentDao  studentDao = new StudentDao();
 	
-	//TODO 
-	//Persist to Database
-	return true;
+public boolean addStudent(Student student) {
+	return studentDao.addStudent(student);
 }
 
 }
